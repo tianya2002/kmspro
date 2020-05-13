@@ -1,0 +1,18 @@
+Windows:
+PC端以管理员身份运行CMD（命令提示符）
+依次输入以下命令：
+slmgr /skms 你服务器的IP或者域名
+slmgr /ato
+slmgr /xpr
+
+Office:
+PC端以管理员身份运行CMD（命令提示符）
+这里以 Office2016 64位为例
+进入64位版本安装目录
+cd /d "%ProgramFiles%\Microsoft Office\Office16"
+依次输入以下命令：
+cscript ospp.vbs /sethst:你服务器的IP或域名
+cscript ospp.vbs /act
+cscript ospp.vbs /dstatus
+
+激活周期为180天，到期后如果你的KMS服务器还在运行，Windows将自动进行激活
